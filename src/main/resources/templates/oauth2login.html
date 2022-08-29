@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p th:each="url : ${clientUrls}">
+        <a th:text="${url.key} + ' Login'"
+           th:href="${url.value}">Login</a>
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          licos:
+            client-id: FV6FiyZGtuFnLEbCrE9V
+            client-secret: OBnHaEHzRGRE5rARg5iTpE5fxihmkDSv8Y6NIFo8ZlgV1kQ0UkFHDrj
+            authorization-grantType: AUTHORIZATION_CODE
+        provider:
+          licos:
+            authorization-uri: http://139.159.202.171:32271/oauth2/authorize
+            token-uri: http://139.159.202.171:32271/oauth2/token
+            user-info-uri: http://139.159.202.171:32271/oauth2/userinfo
+            jwk-set-uri: https://<subdomain>.okta.com/oauth2/v1/keys
+  main:
+    allow-circular-references: true
+server:
+  port: 9000
+debug: true
